@@ -1,11 +1,15 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
+// Вказуємо, що __dirname є глобальною змінною
+const __dirname = path.resolve(); // Додаємо цю лінію
+
+module.exports = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    clean: true, // Очищує папку dist перед кожною новою збіркою
   },
   module: {
     rules: [
@@ -27,7 +31,9 @@ export default {
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: {
+      directory: path.resolve(__dirname, 'dist'),
+    },
     compress: true,
     port: 3000,
   },
