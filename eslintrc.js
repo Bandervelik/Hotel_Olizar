@@ -2,9 +2,10 @@ module.exports = {
     parser: '@typescript-eslint/parser',
     parserOptions: {
       ecmaVersion: 2024,
-      sourceType: 'module', 
+      sourceType: 'module',
       ecmaFeatures: {
         jsx: true,
+      },
     },
     extends: [
       'eslint:recommended',
@@ -25,6 +26,10 @@ module.exports = {
       react: {
         version: 'detect',
       },
+    },
+    env: {
+      node: true,
+      browser: true,
     },
   };
   

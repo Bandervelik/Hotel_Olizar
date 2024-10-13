@@ -22,6 +22,8 @@
   },
   "scripts": {
     "prepare": "husky install",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "start": "webpack serve --open",
+    "build": "webpack --mode production"
   }
 }
