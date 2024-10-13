@@ -19,6 +19,9 @@ module.exports = {
       '@typescript-eslint',
       'prettier',
     ],
+    globals: {
+      module: 'readonly',
+    },
     rules: {
       'prettier/prettier': 'error',
     },
