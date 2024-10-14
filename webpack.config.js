@@ -1,15 +1,12 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// Вказуємо, що __dirname є глобальною змінною
-const __dirname = path.resolve(); // Додаємо цю лінію
-
-module.exports = {
+const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    clean: true, // Очищує папку dist перед кожною новою збіркою
+    clean: true,
   },
   module: {
     rules: [
@@ -19,6 +16,10 @@ module.exports = {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/,  // Обробка CSS файлів
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -32,10 +33,12 @@ module.exports = {
   ],
   devServer: {
     static: {
-      directory: path.resolve(__dirname, 'dist'),
+      directory: path.join(__dirname, 'dist'),
     },
     compress: true,
     port: 3000,
   },
   mode: 'development',
 };
+
+module.exports = config;
