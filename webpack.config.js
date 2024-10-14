@@ -1,11 +1,12 @@
-import path from 'path';
-import HtmlWebpackPlugin from 'html-webpack-plugin';
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-export default {
+const config = {
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    clean: true,
   },
   module: {
     rules: [
@@ -15,6 +16,10 @@ export default {
         use: {
           loader: 'babel-loader',
         },
+      },
+      {
+        test: /\.css$/,  // Обробка CSS файлів
+        use: ['style-loader', 'css-loader'],
       },
     ],
   },
@@ -27,9 +32,13 @@ export default {
     }),
   ],
   devServer: {
-    static: path.resolve(__dirname, 'dist'),
+    static: {
+      directory: path.join(__dirname, 'dist'),
+    },
     compress: true,
     port: 3000,
   },
   mode: 'development',
 };
+
+module.exports = config;
