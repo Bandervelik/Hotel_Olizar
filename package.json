@@ -24,7 +24,7 @@
     "webpack-dev-server": "^5.1.0"
   },
   "scripts": {
-    "test": "echo \"No test specified\" && exit 0",
+    "test": "jest",
     "prepare": "husky install",
     "lint": "eslint .",
     "start": "webpack serve --open",
