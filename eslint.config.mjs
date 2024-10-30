@@ -8,9 +8,9 @@ export default [
   {
     languageOptions: {
       globals: {
-        ...globals.browser, // Інші глобальні змінні для браузера
-        module: 'readonly',  // Додаємо глобальну змінну 'module'
-        __dirname: 'readonly' // Додаємо глобальну змінну '__dirname'
+        ...globals.browser, 
+        module: 'readonly',  
+        __dirname: 'readonly' 
       },
     },
   },
