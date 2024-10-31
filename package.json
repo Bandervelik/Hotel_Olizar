@@ -1,7 +1,10 @@
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
+  "type": "module",
   "devDependencies": {
-    "@babel/core": "^7.25.8",
-    "@babel/preset-env": "^7.25.8",
+    "@babel/core": "^7.26.0",
+    "@babel/preset-env": "^7.26.0",
     "@babel/preset-react": "^7.25.7",
     "@eslint/js": "^9.12.0",
     "@typescript-eslint/eslint-plugin": "^8.8.1",
@@ -28,8 +31,7 @@
     "prepare": "husky install",
     "lint": "eslint .",
     "start": "webpack serve --open",
-    "build": "webpack --mode production",
-    "type": "module"
+    "build": "webpack --mode production"
   },
   "dependencies": {
     "css-loader": "^7.1.2",
