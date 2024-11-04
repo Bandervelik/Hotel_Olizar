@@ -1,17 +1,16 @@
 import React from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import Contact from './components/Contact';
 
-const App = () => {
-  return (
-    <div>
-      <Header />
-      <main>
-        <h1>Welcome to Hotel Olizar</h1>
-      </main>
-      <Footer />
-    </div>
-  );
-};
+function App() {
+    return (
+        <div>
+            <Header />
+            <Contact />
+            <Footer />
+        </div>
+    );
+}
 
 export default App;
