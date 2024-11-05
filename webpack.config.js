@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/, // Додаємо .jsx до правил
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -45,5 +45,8 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.jsx'], 
+    alias: {
+      images: path.resolve(__dirname, 'src/images'),
+    },
   },
 };
