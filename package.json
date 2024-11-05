@@ -5,21 +5,23 @@
   "devDependencies": {
     "@babel/core": "^7.26.0",
     "@babel/preset-env": "^7.26.0",
-    "@babel/preset-react": "^7.25.7",
+    "@babel/preset-react": "^7.25.9",
     "@eslint/js": "^9.12.0",
     "@typescript-eslint/eslint-plugin": "^8.8.1",
     "@typescript-eslint/parser": "^8.8.1",
     "babel-loader": "^9.2.1",
+    "css-loader": "^7.1.2",
     "eslint": "^9.12.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^5.2.1",
     "eslint-plugin-react": "^7.37.1",
     "globals": "^15.11.0",
-    "html-webpack-plugin": "^5.6.0",
+    "html-webpack-plugin": "^5.6.3",
     "husky": "^9.1.6",
     "path": "^0.12.7",
     "prettier": "^3.3.3",
+    "style-loader": "^4.0.0",
     "typescript": "^5.5.4",
     "typescript-eslint": "^8.8.1",
     "webpack": "^5.95.0",
@@ -34,11 +36,9 @@
     "build": "webpack --mode production"
   },
   "dependencies": {
-    "css-loader": "^7.1.2",
     "mongoose": "^8.7.2",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-router-dom": "^6.27.0",
-    "style-loader": "^4.0.0"
+    "react-router-dom": "^6.27.0"
   }
 }

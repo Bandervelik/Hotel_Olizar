@@ -1,44 +1,49 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = {
-  entry: './src/index.js',
+module.exports = {
+  mode: 'development',
+  entry: './src/index.jsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
-    clean: true,
+    clean: true, 
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx)$/, // Додаємо .jsx до правил
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
+          options: {
+            presets: ['@babel/preset-env', '@babel/preset-react'],
+          },
         },
       },
       {
-        test: /\.css$/,  
+        test: /\.css$/,
         use: ['style-loader', 'css-loader'],
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        type: 'asset/resource',
       },
     ],
   },
-  resolve: {
-    extensions: ['.js', '.jsx'],
-  },
   plugins: [
     new HtmlWebpackPlugin({
-      template: './src/index.html',
+      template: './public/index.html',
+      filename: 'index.html',
     }),
   ],
   devServer: {
-    static: {
-      directory: path.join(__dirname, 'dist'),
-    },
-    compress: true,
-    port: 3000,
+    static: path.join(__dirname, 'dist'),
+    port: 8080,
+    hot: true,
+    open: true,
   },
-  mode: 'development',
+  resolve: {
+    extensions: ['.js', '.jsx'], 
+  },
 };
-
-module.exports = config;
