@@ -43,7 +43,7 @@
     height: 100%;
     z-index: 1;
     opacity: 0.1;
-    background-image: url('src/images/home/room-bg.jpg');
+    background-image: url('images/home/room-bg.jpg');
     background-repeat: no-repeat;
     background-position: 50% 0;
     -ms-background-size: cover;

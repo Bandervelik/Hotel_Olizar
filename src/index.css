@@ -460,7 +460,7 @@
   }
   .ui-datepicker .ui-state-hover .ui-icon,
   .ui-datepicker .ui-state-focus .ui-icon {
-    background-image: url("/src/css/images/ui-icons_ffffff_256x240.png");  
+    background-image: url("css/images/ui-icons_ffffff_256x240.png");  
   }
   .ui-datepicker .ui-state-default a,
   .ui-datepicker .ui-state-default a:link,
@@ -513,7 +513,7 @@
   }
   .ui-datepicker.secondary .ui-state-hover .ui-icon,
   .ui-datepicker.secondary .ui-state-focus .ui-icon {
-    background-image: url("/src/css/images/ui-icons_ffffff_256x240.png");  
+    background-image: url("css/images/ui-icons_ffffff_256x240.png");  
   }
   .ui-datepicker.secondary .ui-state-default a,
   .ui-datepicker.secondary .ui-state-default a:link,
@@ -785,7 +785,6 @@
     font-weight: 300;
   }
   #main-slider .slide-divider {
-    background-image: url('src/images/home/slider-divider.png');
     background-repeat: no-repeat;
     background-size: cover;
     height: 15px;
@@ -941,7 +940,7 @@
     height: 28px;
     z-index: 111;
     opacity: 1;
-    background-image: url('src/images/home/room-left-arrow.png');
+    background-image: url('images/home/room-left-arrow.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -ms-background-size: cover;
@@ -954,7 +953,7 @@
     margin-top: 50px;
   }
   .moon-divider {
-    background-image: url('src/images/moon-divider.png');
+    background-image: url('images/moon-divider.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 30px;
@@ -966,7 +965,7 @@
     height: 15px;
   }
   .moon-divider.white {
-    background-image: url('src/images/moon-divider-white.png');
+    background-image: url('images/moon-divider-white.png');
   }
   section {
     padding: 150px 0px 80px 0px;
@@ -1057,7 +1056,7 @@
     border-radius: 20px;
   }
   .section-facilities .content-box .tri-up {
-    background-image: url('src/images/home/triangle-up.png');
+    background-image: url('images/home/triangle-up.png');
     width: 24px;
     height: 16px;
     margin: 0 auto;
@@ -1066,14 +1065,14 @@
     z-index: 1;
   }
   .section-facilities .content-box .tri-down {
-    background-image: url('src/images/home/triangle-up.png');
+    background-image: url('images/home/triangle-up.png');
     width: 24px;
     height: 16px;
     margin: 0 auto;
     position: relative;
     top: -15px;
     z-index: 1;
-    background-image: url('src/images/home/triangle-down.png');
+    background-image: url('images/home/triangle-down.png');
     top: 15px;
   }
   .section-facilities .content-box .title {
@@ -1105,7 +1104,7 @@
     height: 100%;
     z-index: 0;
     opacity: 0.1;
-    background-image: url('src/images/home/testimonial-bg.jpg');
+    background-image: url('images/home/testimonial-bg.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -ms-background-size: cover;
@@ -1148,7 +1147,7 @@
     height: 27px;
     z-index: 111;
     opacity: 1;
-    background-image: url('src/images/home/quote-start.png');
+    background-image: url('images/home/quote-start.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -ms-background-size: cover;
@@ -1166,7 +1165,7 @@
     height: 27px;
     z-index: 111;
     opacity: 1;
-    background-image: url('src/images/home/quote-end.png');
+    background-image: url('images/home/quote-end.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -ms-background-size: cover;
@@ -1219,7 +1218,7 @@
     margin-right: 30px;
   }
   .section-testimonials-2 .testimonial-box .tri-down {
-    background-image: url('src/images/about/testimonial-tri.png');
+    background-image: url('images/about/testimonial-tri.png');
     width: 15px;
     height: 21px;
     position: relative;
@@ -1353,7 +1352,7 @@
     height: 100%;
     z-index: 0;
     opacity: 0.3;
-    background-image: url('src/images/breadcrumb-bg.jpg');
+    background-image: url('images/breadcrumb-bg.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -ms-background-size: cover;
@@ -1389,7 +1388,7 @@
     font-size: 24px;
   }
   .section-style-2 .section-starter {
-    background-image: url('src/images/section-starter.png');
+    background-image: url('images/section-starter.png');
     background-repeat: no-repeat;
     background-size: contain;
     height: 15px;
@@ -1504,7 +1503,6 @@
     height: 100%;
     z-index: 0;
     opacity: 0.3;
-    background-image: url('src/images/home/why-us-bg.jpg');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     -ms-background-size: cover;
@@ -2957,7 +2955,7 @@
       height: 100%;
       z-index: 1;
       opacity: 0.1;
-      background-image: url('src/images/home/room-bg.jpg');
+      background-image: url('images/home/room-bg.jpg');
       background-repeat: no-repeat;
       background-position: 50% 0;
       -ms-background-size: cover;
