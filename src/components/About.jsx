@@ -1,14 +1,12 @@
 import React from 'react';
-import Header from './Header';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import '../css/style.css';
+import Header from './Header.jsx';
+import Navbar from './Navbar.jsx';
+import Footer from './Footer.jsx';
+import '../index.css';
 
-function About() {
+const About = () => {
     return (
         <div className="loading">
-            <Header />
-            <Navbar />
 
             <h1 className="hidden">Про нас</h1>
             <div id="preloader-wrapper">
@@ -133,8 +131,6 @@ function About() {
                     </div>
                 </div>
             </section>
-
-            <Footer />
         </div>
     );
 }

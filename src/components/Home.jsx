@@ -1,13 +1,22 @@
 import React from "react";
-import Header from "./Header";
-import Navbar from "./Navbar";
-import Footer from "./Footer";
+import Header from "./Header.jsx";
+import Navbar from "./Navbar.jsx";
+import Footer from "./Footer.jsx";
+import sliderImage from "../images/home/slider-2.jpg";
+import whyMoon1 from "../images/home/why-moon-1.jpg";
+import whyMoon2 from "../images/home/why-moon-2.jpg";
+import whyMoon3 from "../images/home/why-moon-3.jpg";
+import roomImage1 from "../images/room-1.jpg";
+import roomImage2 from "../images/room-2.jpg";
+import roomImage3 from "../images/room-3.jpg";
+
+const smoothScroll = (target) => {
+  document.getElementById(target).scrollIntoView({ behavior: "smooth" });
+};
 
 const Home = () => {
   return (
     <>
-      <Header />
-      <Navbar />
 
       <div id="main-slider" className="slider">
         <div className="swiper-containir">
@@ -16,7 +25,7 @@ const Home = () => {
             <div
               className="swiper-slide"
               style={{
-                background: "url('images/home/slider-2.jpg') center center/cover no-repeat",
+                background: `url(${sliderImage}) center center/cover no-repeat`,
               }}
             >
               <div className="container">
@@ -25,7 +34,11 @@ const Home = () => {
                   <h3 className="slide-title">
                     <strong></strong>
                   </h3>
-                  <div className="slide-subtitle-italic" data-animate="fadeInLeft" data-delay="300"></div>
+                  <div
+                    className="slide-subtitle-italic"
+                    data-animate="fadeInLeft"
+                    data-delay="300"
+                  ></div>
                 </div>
               </div>
             </div>
@@ -52,7 +65,11 @@ const Home = () => {
               </div>
               <div className="col-md-8">
                 <div className="search-form">
-                  <form className="form-inline check-rooms secondary" action="#1" onClick={() => smoothScroll("1")}>
+                  <form
+                    className="form-inline check-rooms secondary"
+                    action="#1"
+                    onClick={() => smoothScroll("1")}
+                  >
                     <button type="submit" className="button">
                       Перейти
                     </button>
@@ -69,17 +86,22 @@ const Home = () => {
         <div className="moon-divider"></div>
         <div className="container">
           <div className="row">
-            {/* Пункти "Чому готель 'Olizar'" */}
-            {[1, 2, 3].map((item) => (
-              <div className="col-sm-4" key={item}>
+            {[whyMoon1, whyMoon2, whyMoon3].map((image, index) => (
+              <div className="col-sm-4" key={index}>
                 <div className="content-box">
                   <img
-                    src={`images/home/why-moon-${item}.jpg`}
+                    src={image}
                     className="img-centered img-responsive"
                     data-animate="fadeIn"
-                    alt={`why-moon-${item}`}
+                    alt={`why-moon-${index + 1}`}
                   />
-                  <h3 className="title">{item === 1 ? "Пропонуємо найкращий досвід" : item === 2 ? "Оновлені номери" : "Досвідчений та професійний персонал"}</h3>
+                  <h3 className="title">
+                    {index === 0
+                      ? "Пропонуємо найкращий досвід"
+                      : index === 1
+                      ? "Оновлені номери"
+                      : "Досвідчений та професійний персонал"}
+                  </h3>
                   <p className="content">
                     {/* Додайте текст відповідно до кожного блоку */}
                   </p>
@@ -94,12 +116,18 @@ const Home = () => {
         <h2 className="hidden">Кімнати</h2>
         <div className="container">
           <div className="rooms-area">
-            {[1, 2, 3].map((room) => (
-              <div className="row" key={room}>
+            {[roomImage1, roomImage2, roomImage3].map((roomImage, index) => (
+              <div className="row" key={index}>
                 <div className="col-md-4 col-xs-6">
                   <div className="room-title-container">
                     <div className="title-room">Стандартний</div>
-                    <h3 className="title">{room === 1 ? "Одномісний" : room === 2 ? "Двомісний" : "Тримісний"}</h3>
+                    <h3 className="title">
+                      {index === 0
+                        ? "Одномісний"
+                        : index === 1
+                        ? "Двомісний"
+                        : "Тримісний"}
+                    </h3>
                     <p className="content muted">
                       {/* Опис кімнати для кожного блоку */}
                     </p>
@@ -107,21 +135,27 @@ const Home = () => {
                 </div>
                 <div className="col-md-4 hidden-xs hidden-sm">
                   <img
-                    src={`images/room-${room}.jpg`}
+                    src={roomImage}
                     className="img-centered img-responsive grayscale"
                     data-animate="fadeInLeft"
-                    alt={`room-${room}`}
+                    alt={`room-${index + 1}`}
                   />
                 </div>
                 <div className="col-md-4 col-xs-6">
                   <div className="room-container">
                     <div className="price-text">
-                      <span className="price">{room === 1 ? "20000 ₴" : room === 2 ? "30000 ₴" : "40000 ₴"}</span> / ніч
+                      <span className="price">
+                        {index === 0 ? "20000 ₴" : index === 1 ? "30000 ₴" : "40000 ₴"}
+                      </span>{" "}
+                      / ніч
                     </div>
                     <p className="room-desc">
                       <strong>Всі номери вільні</strong>
                     </p>
-                    <p className="room-desc">При бронюванні на тривалий термін, або групове бронювання можлива знижка</p>
+                    <p className="room-desc">
+                      При бронюванні на тривалий термін, або групове бронювання
+                      можлива знижка
+                    </p>
                     <button onClick={() => openModal()} className="button">
                       Забронювати зараз
                     </button>
@@ -132,8 +166,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      <Footer />
     </>
   );
 };

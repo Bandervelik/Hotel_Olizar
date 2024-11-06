@@ -1,16 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <nav className="main-menu clearfix">
             <h2 className="hidden">Головне меню</h2>
             <ul>
-                <li className="menu-item"><a href="index.html">Головна</a></li>
-                <li className="menu-item"><a href="about.html">Про нас</a></li>
-                <li className="menu-item"><a href="rooms.html">Кімнати</a></li>
-                <li className="menu-item"><a href="facilities.html">Послуги</a></li>
-                <li className="menu-item"><a href="gallery.html">Галерея</a></li>
-                <li className="menu-item"><a href="contact.html">Контакти</a></li>
+                <li className="menu-item"><Link to="/">Головна</Link></li>
+                <li className="menu-item"><Link to="/about">Про нас</Link></li>
+                <li className="menu-item"><Link to="/rooms">Кімнати</Link></li>
+                <li className="menu-item"><Link to="/facilities">Послуги</Link></li>
+                <li className="menu-item"><Link to="/gallery">Галерея</Link></li>
+                <li className="menu-item"><Link to="/contact">Контакти</Link></li>
             </ul>
         </nav>
     );

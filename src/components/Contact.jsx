@@ -1,8 +1,12 @@
 import React from 'react';
+import Header from './Header.jsx';
+import Navbar from './Navbar.jsx';
+import Footer from './Footer.jsx';
+import '../index.css';
 
 const Contact = () => {
     return (
-        <div>
+        <div className="loading">
             <section className="section-breadcrumb">
                 <h2 className="title">Контакти</h2>        
             </section>

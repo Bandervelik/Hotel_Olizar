@@ -1,10 +1,11 @@
 import React from 'react';
+import Navbar from './Navbar.jsx';
 
 const Header = () => {
     return (
         <header>
             <div className="container">
-                <a href="index.html" className="logo-link">
+                <a href="Home.jsx" className="logo-link">
                     <img className="logo" src="images/logo.svg" height="110" alt="Logo" />
                 </a>
                 <Navbar />

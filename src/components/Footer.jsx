@@ -8,10 +8,10 @@ const Footer = () => {
                     <div className="col-sm-4">
                         <h3 className="subtitle"><strong>Корисні Посилання</strong></h3>
                         <ul className="site-links">
-                            <li><a href="facilities.html">Послуги</a></li>
-                            <li><a href="rooms.html">Кімнати</a></li>
-                            <li><a href="about.html">Про нас</a></li>
-                            <li><a href="about.html">Часті запитання</a></li>
+                            <li><a href="Facilities.jsx">Послуги</a></li>
+                            <li><a href="Rooms.jsx">Кімнати</a></li>
+                            <li><a href="About.jsx">Про нас</a></li>
+                            <li><a href="About.jsx">Часті запитання</a></li>
                         </ul>
                     </div>
                     <div className="col-sm-4 text-center">
@@ -19,7 +19,7 @@ const Footer = () => {
                         <p><a href="https://www.google.com/maps/place/Свитовец">Гуцульська Вулиця 3, Свидовець, 90630, Україна</a></p>
                         <p><a href="tel:+380971546438">+380 97 154 6438</a></p>
                         <p><a href="mailto:olizar.mykhailo@student.uzhnu.edu.ua">olizar.mykhailo@student.uzhnu.edu.ua</a></p>
-                        <p><a href="index.html">http://olizar.com</a></p>
+                        <p><a href="Home.jsx">http://olizar.com</a></p>
                     </div>
                     <div className="col-sm-4 text-center">
                         <h3 className="subtitle"><strong>Наші Мережі</strong></h3>
