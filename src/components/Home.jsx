@@ -9,6 +9,7 @@ import whyMoon3 from "../images/home/why-moon-3.jpg";
 import roomImage1 from "../images/room-1.jpg";
 import roomImage2 from "../images/room-2.jpg";
 import roomImage3 from "../images/room-3.jpg";
+import '../index.css';
 
 const smoothScroll = (target) => {
   document.getElementById(target).scrollIntoView({ behavior: "smooth" });
